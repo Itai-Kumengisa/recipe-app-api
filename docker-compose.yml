@@ -1,0 +1,14 @@
+version: "3"
+
+#next we'll define the services that make up our application
+services:
+  app:
+    user: $UID:$GID
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
