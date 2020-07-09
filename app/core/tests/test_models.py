@@ -17,7 +17,6 @@ class ModelTests(TestCase):
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
 
-
     def test_new_user_email_normalized(self):
         """Checks if the user's email is lowercase"""
         email = 'test@GMAIL.COM'
